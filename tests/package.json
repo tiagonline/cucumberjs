@@ -1,0 +1,20 @@
+{
+  "name": "cucumberjs_tests",
+  "version": "1.0.0",
+  "description": "Testes de End2End com Cucumber e Nightwatch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fernando Papini",
+  "license": "MIT",
+  "devDependencies": {
+    "chromedriver": "^2.21.2",
+    "cucumber": "^1.2.0",
+    "faker": "^3.1.0",
+    "nightwatch": "^0.9.5",
+    "nightwatch-cucumber": "^4.0.0",
+    "nightwatch-custom-commands-assertions": "^1.0.5",
+    "phantomjs-prebuilt": "^2.1.7",
+    "selenium-server": "^2.53.1"
+  }
+}
