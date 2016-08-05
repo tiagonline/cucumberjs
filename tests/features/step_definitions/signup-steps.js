@@ -9,11 +9,13 @@ module.exports = function () {
         callback();
     });
 
-    this.Given(/^eu preencho o formulário de cadastro de usuários$/, function (callback) {
+    this.Given(/^eu preencho o formulário de cadastro de <usuarios> com (\d+)$/, function (iteration, table, callback) {
+
+        var users = table.hashes();
         this
-            .setValue(page.register.name, 'Fernando Papini')
-            .setValue(page.register.email, 'fernandosqa@outlook.com')
-            .setValue(page.register.password, 'teste@12')
+            .setValue(page.register.name, users[iteration].Nome)
+            .setValue(page.register.email, users[iteration].Email)
+            .setValue(page.register.password, users[iteration].Senha)
         callback();
     });
 
@@ -26,6 +28,15 @@ module.exports = function () {
         this
             .pause(3000)
             .assert.containsText(page.body, 'dashboard');
+        callback();
+    });
+
+    this.Given(/^faço logout$/, function (callback) {
+        this
+            .click(page.menu.userMenu)
+            .pause(1000)
+            .click(page.menu.logout)
+            .pause(3000);
         callback();
     });
 

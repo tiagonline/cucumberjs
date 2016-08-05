@@ -2,7 +2,9 @@ module.exports = {
     body: 'body',
     menu: {
         register: '#menu-register a',
-        login: '#menu-login a'
+        login: '#menu-login a',
+        userMenu: '.user-menu',
+        logout: '#sub-menu-logout'
     },
     register: {
         form: '#register_form',
